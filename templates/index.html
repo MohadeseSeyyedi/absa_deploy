@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis Form</title>
+</head>
+<body>
+    <form id="sentimentForm" action="/submitSentiment" method="post">
+        <label for="comment">Comment:</label><br>
+        <input type="text" id="comment" name="comment"><br>
+        <label for="aspect">Aspect:</label><br>
+        <input type="text" id="aspect" name="aspect"><br>
+        <button type="submit">Analyze sentiment</button>
+    </form>
+    <br>
+    <label for="sentiment_prediction">Sentiment Prediction:</label><br>
+    <input type="text" id="sentiment_prediction" name="sentiment_prediction" value="Sentiment value from backend">
+</body>
+</html>
