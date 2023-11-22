@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sentiment Analysis Form</title>
+    <title>Aspect Based Sentiment Analysis</title>
 </head>
-<body>
+<body style="background: #f5eded;">
+    <div class="login" style="text-align: center;">
+    <h1 style="color:rgb(23, 38, 137);">Aspect Based Sentiment Analysis</h1>
     <form id="sentimentForm" action="/submitSentiment" method="post">
         <label for="comment">Comment:</label><br>
-        <input type="text" id="comment" name="comment"><br>
+        <input type="text" id="comment" name="comment" style="width: 500px; height: 100px;" placeholder="type a comment about anything">
+        <br><br><br><br>
+        
         <label for="aspect">Aspect:</label><br>
-        <input type="text" id="aspect" name="aspect"><br>
+        <input type="text" id="aspect" name="aspect" style="width: 500px; height: 100px;" placeholder="What aspect of the comment do I analyze?">
+        <br><br><br><br>
+        
         <button type="submit">Analyze sentiment</button>
     </form>
     <br>
-    <label for="sentiment_prediction">Sentiment Prediction:</label><br>
-    <input type="text" id="sentiment_prediction" name="sentiment_prediction" value="Sentiment value from backend">
+    <p style="color:rgb(23, 38, 137);" dir="rtl">{{ input_comment }}</p>
+    <h4 style="color:rgb(23, 38, 137);">{{ prediction_text }}</h4>
+
+</div>
 </body>
 </html>
