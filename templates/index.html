@@ -6,7 +6,7 @@
 <body style="background: #f5eded;">
     <div class="login" style="text-align: center;">
     <h1 style="color:rgb(23, 38, 137);">Aspect Based Sentiment Analysis</h1>
-    <form id="sentimentForm" action="/submitSentiment" method="post">
+    <form id="sentimentForm" action="{{url_for('show_prediction')}}" method="post">
         <label for="comment">Comment:</label><br>
         <input type="text" id="comment" name="comment" style="width: 500px; height: 100px;" placeholder="type a comment about anything">
         <br><br><br><br>
@@ -18,7 +18,8 @@
         <button type="submit">Analyze sentiment</button>
     </form>
     <br>
-    <p style="color:rgb(23, 38, 137);" dir="rtl">{{ input_comment }}</p>
+    <p style="color:rgb(23, 38, 137);">{{ input_comment }}</p>
+    <p style="color:rgb(23, 38, 137);">{{ aspect_text }}</p>
     <h4 style="color:rgb(23, 38, 137);">{{ prediction_text }}</h4>
 
 </div>
