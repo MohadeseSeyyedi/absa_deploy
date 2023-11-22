@@ -3,3 +3,4 @@ models/pretrained/models/absa/*.*
 models/pretrained/tokenizers/absa/*.*
 models/pretrained/models/sentiment/*.*
 models/pretrained/tokenizers/sentiment/*.*
+__pycache__/*.*
